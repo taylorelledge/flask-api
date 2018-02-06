@@ -1,0 +1,19 @@
+<html>
+    <head>
+        {%if title%}
+        <title>{{title}} - Blog</title>
+        {% else %}
+        <title>What up - Blog</title>
+        {%endif%}
+    </head>
+    <body>
+        <div>
+            Blog : 
+            <a href="/index">Home</a>
+            <a href="/login">Login</a>
+        </div>
+        <hr>
+        {% with messages = get_flashed_messages()%}
+        {%block content%}{% endblock %}
+    </body>
+</html>
